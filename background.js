@@ -10,11 +10,10 @@ browser.browserAction.onClicked.addListener( async (tab) => {
 		}catch(e){
 			console.error(e);
 		}
-		return '';
+		return '^https?:\/\/corp\.local\/reports\/[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\/complete$';
 	})());
 
 	if(regexstr === ''){
-		console.log('hammertime');
 		return;
 	}
 
@@ -41,7 +40,6 @@ browser.browserAction.onClicked.addListener( async (tab) => {
 			keep_open = keep_open[0];
 			if(!keep_open){
 				browser.tabs.remove(t.id);
-				//console.log('removed ', t.url);
 			}
 		}
 	}
