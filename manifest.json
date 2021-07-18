@@ -13,7 +13,7 @@
   "icons": {
   },
   "manifest_version": 2,
-  "name": "close-tabs-when-links-doesnt-exist",
+  "name": "close-child-tabs-without-link",
   "options_ui": {
     "browser_style": true,
     "page": "options.html"
